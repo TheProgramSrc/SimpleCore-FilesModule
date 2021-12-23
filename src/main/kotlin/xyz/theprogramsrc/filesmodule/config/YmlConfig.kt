@@ -349,11 +349,18 @@ class YmlConfig(val file: File){
     /**
      * Gets the entry set of the [YmlConfig]
      *
-     * @param path The path to get the value of
      * @param deep If true, the keys will contain all the keys within any child node (and their children, recursively). Otherwise, this will contain only the keys of any direct children, and not their own children.
      * @return The entry set of the [YmlConfig]
      */
-    fun entries(path: String, deep: Boolean = false): Map<String, Any> = config.getKeys(false).associateWith { get(it) }
+    fun entries(deep: Boolean = false): Set<Map.Entry<String, Any>> = config.getKeys(deep).associateWith { get(it) }.entries
+
+    /**
+     * Gets the keys of the [YmlConfig]
+     *
+     * @param deep If true, the keys will contain all the keys within any child node (and their children, recursively). Otherwise, this will contain only the keys of any direct children, and not their own children.
+     * @return The keys of the [YmlConfig]
+     */
+    fun keys(deep: Boolean = false): Set<String> = config.getKeys(deep)
 
     /**
      * Gets a configuration section of the given path
