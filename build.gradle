@@ -1,13 +1,12 @@
-import org.apache.tools.ant.filters.ReplaceTokens
-
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
-    id 'org.jetbrains.dokka' version '1.6.0'
+    id 'net.kyori.blossom' version '1.2.0'
+    id 'org.jetbrains.dokka' version '1.6.21'
 }
 
-def projectVersion = (System.getenv("VERSION") ?: '0.1.0-SNAPSHOT').replaceFirst("v", "").replace('/', '')
+def projectVersion = (System.getenv("VERSION") ?: '0.1.2-SNAPSHOT').replaceFirst("v", "").replace('/', '')
 
 group 'xyz.theprogramsrc'
 version projectVersion
@@ -27,12 +26,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
-    compileOnly 'org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT'
-    compileOnly 'net.md-5:bungeecord-api:1.18-R0.1-SNAPSHOT'
-    compileOnly 'xyz.theprogramsrc:simplecoreapi:0.1.12-SNAPSHOT'
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.7.0'
+    compileOnly 'xyz.theprogramsrc:simplecoreapi:0.4.0-SNAPSHOT'
 
-    implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.7.2'
+    implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.8'
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
 }
@@ -59,8 +56,12 @@ java {
     withSourcesJar()
 }
 
-processResources {
-    filter ReplaceTokens, tokens: [name: rootProject.name, version: project.version.toString(), description: project.description, git_short: System.getenv("GIT_COMMIT_SHORT_HASH") ?: "unknown", git_full: System.getenv("GIT_COMMIT_LONG_HASH") ?: "unknown"]
+blossom {
+    replaceToken '@name@', rootProject.name
+    replaceToken '@version@', project.version.toString()
+    replaceToken '@description@', project.description
+    replaceToken '@git_short@', System.getenv("GIT_COMMIT_SHORT_HASH") ?: "unknown"
+    replaceToken '@git_full@', System.getenv("GIT_COMMIT_LONG_HASH") ?: "unknown"
 }
 
 tasks.withType(JavaCompile) {

@@ -1,5 +1,8 @@
-# v0.1.1 - Snapshot
+## v0.1.2 - Snapshot
 * Updated Dependencies
 
-# v0.1.0 - Snapshot
+## v0.1.1 - Snapshot
+* Updated Dependencies
+
+## v0.1.0 - Snapshot
 Hello, World!
