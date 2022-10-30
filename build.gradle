@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.20'
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'net.kyori.blossom' version '1.2.0'
@@ -26,7 +26,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.7.0'
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
     compileOnly 'xyz.theprogramsrc:simplecoreapi:0.4.0-SNAPSHOT'
 
     implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.8.2'
