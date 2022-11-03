@@ -1,3 +1,7 @@
+## v0.1.3 - Snapshot
+* Updated Dependencies
+* Migrated to JitPack
+
 ## v0.1.2 - Snapshot
 * Updated Dependencies
 
