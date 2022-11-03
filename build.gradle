@@ -2,11 +2,11 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.7.20'
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
-    id 'net.kyori.blossom' version '1.2.0'
+    id 'cl.franciscosolis.blossom-extended' version '1.3.1'
     id 'org.jetbrains.dokka' version '1.7.20'
 }
 
-def projectVersion = (System.getenv("VERSION") ?: '0.1.2-SNAPSHOT').replaceFirst("v", "").replace('/', '')
+def projectVersion = (System.getenv("VERSION") ?: '0.1.3-SNAPSHOT').replaceFirst("v", "").replace('/', '')
 
 group 'xyz.theprogramsrc'
 version projectVersion
@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
-    compileOnly 'xyz.theprogramsrc:simplecoreapi:0.4.0-SNAPSHOT'
+    compileOnly 'xyz.theprogramsrc:simplecoreapi:0.4.5-SNAPSHOT'
 
     implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.8.2'
 
@@ -90,10 +90,12 @@ publishing {
     repositories {
         if(System.getenv('env') == 'prod'){
             maven {
-                name = 'TheProgramSrcRepository'
-                credentials.username = System.getenv('NEXUS_USERNAME')
-                credentials.password = System.getenv('NEXUS_PASSWORD')
-                url = uri("https://repo.theprogramsrc.xyz/repository/simplecoreapi-modules/")
+                name = 'GitHubPackages'
+                url = 'https://maven.pkg.github.com/TheProgramSrc/SimpleCore-Filesmodule'
+                credentials {
+                    username = System.getenv('GITHUB_ACTOR')
+                    password = System.getenv('GITHUB_TOKEN')
+                }
             }
         }else{
             mavenLocal()
