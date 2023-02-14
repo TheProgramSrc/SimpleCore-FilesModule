@@ -1,10 +1,7 @@
 package xyz.theprogramsrc.filesmodule.config
 
+import com.google.gson.*
 import xyz.theprogramsrc.filesmodule.utils.file
-import xyz.theprogramsrc.simplecoreapi.libs.google.gson.JsonArray
-import xyz.theprogramsrc.simplecoreapi.libs.google.gson.JsonElement
-import xyz.theprogramsrc.simplecoreapi.libs.google.gson.JsonObject
-import xyz.theprogramsrc.simplecoreapi.libs.google.gson.JsonParser
 import java.io.File
 
 /**
