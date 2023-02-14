@@ -25,8 +25,7 @@ repositories {
     mavenLocal()
     mavenCentral()
 
-    maven("https://oss.sonatype.org/content/repositories/snapshots/")
-    maven("https://oss.sonatype.org/content/repositories/releases/")
+    maven("https://s01.oss.sonatype.org/content/groups/public/")
     maven("https://oss.sonatype.org/content/groups/public/")
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://repo.codemc.org/repository/maven-public/")

@@ -4,6 +4,7 @@
 * Updated to gradle 8
 * Updated to kotlin 1.8
 * Updated to use gradle kotlin dsl
+* Updated repositories
 
 ## v0.1.3 - Snapshot
 * Updated Dependencies
