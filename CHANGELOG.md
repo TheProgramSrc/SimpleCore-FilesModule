@@ -1,3 +1,10 @@
+## v0.2.0 - Snapshot
+* Added to sonatype
+* Updated Dependencies
+* Updated to gradle 8
+* Updated to kotlin 1.8
+* Updated to use gradle kotlin dsl
+
 ## v0.1.3 - Snapshot
 * Updated Dependencies
 * Migrated to JitPack
