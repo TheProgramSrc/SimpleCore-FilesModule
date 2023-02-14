@@ -29,7 +29,7 @@ dependencies {
     compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
     compileOnly 'xyz.theprogramsrc:simplecoreapi:0.4.5-SNAPSHOT'
 
-    implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.8.2'
+    implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.8.3'
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
 }
