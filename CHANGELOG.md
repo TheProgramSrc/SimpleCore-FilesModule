@@ -1,3 +1,6 @@
+## v0.2.2 - Snapshot
+* Run workflow on certain path changes
+
 ## v0.2.1 - Snapshot
 * Removed bundled kotlin
 * Added blossom settings

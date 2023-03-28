@@ -1,6 +1,9 @@
 name: "Test"
 # Only execute this workflow when a PR is opened or when something is pushed to the master branch
-on: [pull_request]
+on:
+  pull_request:
+    branches: [master]
+    paths: ['src/**', 'gradle/**', 'gradlew', 'build.gradle', 'settings.gradle', 'gradle.properties']
 jobs:
   testBuilds:
     strategy:
