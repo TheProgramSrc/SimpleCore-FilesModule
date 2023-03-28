@@ -15,7 +15,7 @@ val env = project.rootProject.file(".env").let { file ->
     if(file.exists()) file.readLines().filter { it.isNotBlank() && !it.startsWith("#") && it.split("=").size == 2 }.associate { it.split("=")[0] to it.split("=")[1] } else emptyMap()
 }.toMutableMap().apply { putAll(System.getenv()) }
 
-val projectVersion = env["VERSION"] ?: "0.2.0-SNAPSHOT"
+val projectVersion = env["VERSION"] ?: "0.2.1-SNAPSHOT"
 
 group = "xyz.theprogramsrc"
 version = projectVersion
@@ -40,6 +40,14 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
+blossom {
+    replaceToken("@name@", rootProject.name)
+    replaceToken("@version@", project.version.toString())
+    replaceToken("@description@", project.description)
+    replaceToken("@git_short@", env["GIT_COMMIT_SHORT_HASH"] ?: "unknown")
+    replaceToken("@git_full@", env["GIT_COMMIT_LONG_HASH"] ?: "unknown")
+}
+
 
 tasks {
     named<ShadowJar>("shadowJar") {
@@ -49,6 +57,7 @@ tasks {
         mergeServiceFiles()
         exclude("**/*.kotlin_metadata")
         exclude("**/*.kotlin_builtins")
+        exclude("kotlin/**")
 
         archiveBaseName.set("FilesModule")
         archiveClassifier.set("")

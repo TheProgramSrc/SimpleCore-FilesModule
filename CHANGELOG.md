@@ -1,3 +1,8 @@
+## v0.2.1 - Snapshot
+* Removed bundled kotlin
+* Added blossom settings
+* Updated dependencies
+
 ## v0.2.0 - Snapshot
 * Added to sonatype
 * Updated Dependencies
