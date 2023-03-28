@@ -40,8 +40,11 @@
             </a>
     </div>
     <div>
-0.2.0-SNAPSHOT    </div>
+0.2.1-SNAPSHOT    </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -51,12 +54,12 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="FilesModule::xyz.theprogramsrc.filesmodule.utils//folder/java.io.File#/PointingToDeclaration//769193423">
+<div class="main-content" data-page-type="member" id="content" pageIds="FilesModule::xyz.theprogramsrc.filesmodule.utils//folder/java.io.File#/PointingToDeclaration//769193423">
   <div class="breadcrumbs"><a href="../../index.html">FilesModule</a><span class="delimiter">/</span><a href="index.html">xyz.theprogramsrc.filesmodule.utils</a><span class="delimiter">/</span><span class="current">folder</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>folder</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a><span class="token punctuation">.</span><a href="folder.html"><span class="token function">folder</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a></div><p class="paragraph">Creates the directory named by this abstract pathname, including any necessary but nonexistent parent directories.  Note that if this operation fails it may have succeeded in creating some necessary parent directories.</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">The current file</p></span><h4 class="">Throws</h4><div class="table" data-togglable="Throws"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/SecurityException.html"><span>Security</span><wbr></wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">If a security manager exists and its
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a><span class="token punctuation">.</span><a href="folder.html"><span class="token function">folder</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a></div><p class="paragraph">Creates the directory named by this abstract pathname, including any necessary but nonexistent parent directories.  Note that if this operation fails it may have succeeded in creating some necessary parent directories.</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">The current file</p></span><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/SecurityException.html"><span>Security</span><wbr></wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">If a security manager exists and its
 [java.lang.SecurityManager#checkRead(String)]
 method does not permit verification of the existence of the
 named directory and all necessary parent directories; or if
