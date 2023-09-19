@@ -15,7 +15,7 @@ val env = project.rootProject.file(".env").let { file ->
     if(file.exists()) file.readLines().filter { it.isNotBlank() && !it.startsWith("#") && it.split("=").size == 2 }.associate { it.split("=")[0] to it.split("=")[1] } else emptyMap()
 }.toMutableMap().apply { putAll(System.getenv()) }
 
-val projectVersion = env["VERSION"] ?: "0.2.2-SNAPSHOT"
+val projectVersion = env["VERSION"] ?: "0.3.0-SNAPSHOT"
 
 group = "xyz.theprogramsrc"
 version = projectVersion
