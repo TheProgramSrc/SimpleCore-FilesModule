@@ -35,7 +35,7 @@ repositories {
 dependencies {
     compileOnly("xyz.theprogramsrc:simplecoreapi:0.6.2-SNAPSHOT")
 
-    implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.3")
+    implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.4")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
 }
