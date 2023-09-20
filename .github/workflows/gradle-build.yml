@@ -16,7 +16,7 @@ jobs:
     steps:
       # Checkout the Code
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       # Set up git hashes environment variables
       - name: Git Hashes
         uses: Im-Fran/git-hashes-action@v1.0.3
@@ -51,7 +51,7 @@ jobs:
           args: ./build/libs/FilesModule-${{ env.VERSION }}.jar application/java-archive
       # Now we deploy the documents to GitHub pages
       - name: Deploy Dokka
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages
           folder: build/dokka
