@@ -8,7 +8,7 @@ plugins {
     id("cl.franciscosolis.blossom-extended") version "1.3.1"
 
     kotlin("jvm") version "1.8.10"
-    id("org.jetbrains.dokka") version "1.8.10"
+    id("org.jetbrains.dokka") version "1.9.0"
 }
 
 val env = project.rootProject.file(".env").let { file ->
@@ -35,9 +35,9 @@ repositories {
 dependencies {
     compileOnly("xyz.theprogramsrc:simplecoreapi:0.6.2-SNAPSHOT")
 
-    implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.3")
+    implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.4")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
 }
 
 blossom {
