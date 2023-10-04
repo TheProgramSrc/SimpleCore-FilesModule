@@ -8,22 +8,6 @@ import java.io.File
 
 internal class PropertiesConfigTest {
 
-    companion object {
-        private val config = PropertiesConfig(File("test.properties"))
-
-        @BeforeAll
-        fun setUp() {
-            config.destroy()
-            config.load()
-        }
-
-        @AfterAll
-        fun tearDown() {
-            config.destroy()
-        }
-
-    }
-
     @Test
     fun has() {
         assertFalse(config.has("test"))
@@ -56,4 +40,23 @@ internal class PropertiesConfigTest {
         assertNull(config.get("test"))
         assertFalse(config.has("test"))
     }
+
+    companion object {
+        private val config = PropertiesConfig(File("test.properties"))
+
+        @JvmStatic
+        @BeforeAll
+        fun setUp() {
+            config.destroy()
+            config.load()
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun tearDown() {
+            config.destroy()
+        }
+
+    }
+    
 }

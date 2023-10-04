@@ -15,7 +15,7 @@ val env = project.rootProject.file(".env").let { file ->
     if(file.exists()) file.readLines().filter { it.isNotBlank() && !it.startsWith("#") && it.split("=").size == 2 }.associate { it.split("=")[0] to it.split("=")[1] } else emptyMap()
 }.toMutableMap().apply { putAll(System.getenv()) }
 
-val projectVersion = env["VERSION"] ?: "0.3.0-SNAPSHOT"
+val projectVersion = env["VERSION"] ?: "0.4.0-SNAPSHOT"
 
 group = "xyz.theprogramsrc"
 version = projectVersion
@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("xyz.theprogramsrc:simplecoreapi:0.6.2-SNAPSHOT")
+    compileOnly("xyz.theprogramsrc:simplecoreapi:0.8.0-SNAPSHOT")
 
     implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.4")
 
@@ -171,14 +171,16 @@ publishing {
     }
 }
 
-nexusPublishing {
-    repositories {
-        sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+if(env["ENV"] == "prod") {
+    nexusPublishing {
+        repositories {
+            sonatype {
+                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
 
-            username.set(env["SONATYPE_USERNAME"])
-            password.set(env["SONATYPE_PASSWORD"])
+                username.set(env["SONATYPE_USERNAME"])
+                password.set(env["SONATYPE_PASSWORD"])
+            }
         }
     }
 }
