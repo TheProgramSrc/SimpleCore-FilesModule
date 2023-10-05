@@ -8,22 +8,6 @@ import java.io.File
 
 internal class JsonConfigTest {
 
-    companion object {
-        private val config = JsonConfig(File("test.json"))
-
-        @BeforeAll
-        fun setUp() {
-            config.destroy()
-            config.load()
-        }
-
-        @AfterAll
-        fun tearDown() {
-            config.destroy()
-        }
-
-    }
-
     @Test
     fun has() {
         assertFalse(config.has("test"))
@@ -80,5 +64,23 @@ internal class JsonConfigTest {
         config.set("addNumber", 3 as Number)
         assertEquals(3 as Number, config.getNumber("addNumber"))
         config.remove("addNumber")
+    }
+
+    companion object {
+        private val config = JsonConfig(File("test.json"))
+
+        @JvmStatic
+        @BeforeAll
+        fun setUp() {
+            config.destroy()
+            config.load()
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun tearDown() {
+            config.destroy()
+        }
+
     }
 }

@@ -1,7 +1,7 @@
 package xyz.theprogramsrc.filesmodule.config
 
 import com.google.gson.*
-import xyz.theprogramsrc.filesmodule.utils.file
+import xyz.theprogramsrc.simplecoreapi.global.utils.extensions.file
 import java.io.File
 
 /**

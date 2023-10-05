@@ -8,22 +8,6 @@ import java.io.File
 
 internal class YmlConfigTest {
 
-    companion object {
-        private val config = YmlConfig(File("test.yml"))
-
-        @BeforeAll
-        fun setUp() {
-            config.destroy()
-            config.load()
-        }
-
-        @AfterAll
-        fun tearDown() {
-            config.destroy()
-        }
-
-    }
-
     @Test
     fun hasAndSet() {
         assertFalse(config.has("test"))
@@ -70,5 +54,23 @@ internal class YmlConfigTest {
         assertEquals("test", config.getOrSet("test", "test"))
         assertTrue(config.has("test"))
         config.remove("test")
+    }
+
+    companion object {
+        private val config = YmlConfig(File("test.yml"))
+
+        @JvmStatic
+        @BeforeAll
+        fun setUp() {
+            config.destroy()
+            config.load()
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun tearDown() {
+            config.destroy()
+        }
+
     }
 }

@@ -2,7 +2,7 @@ package xyz.theprogramsrc.filesmodule.config
 
 import org.simpleyaml.configuration.ConfigurationSection
 import org.simpleyaml.configuration.file.YamlConfiguration
-import xyz.theprogramsrc.filesmodule.utils.file
+import xyz.theprogramsrc.simplecoreapi.global.utils.extensions.file
 import java.io.File
 
 /**
