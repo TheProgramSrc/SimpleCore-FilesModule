@@ -94,13 +94,12 @@ $dokka.location:xyz.theprogramsrc.filesmodule.config/YmlConfig/load/#/PointingTo
 $dokka.location:xyz.theprogramsrc.filesmodule.config/YmlConfig/remove/#kotlin.String/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.config/-yml-config/remove.html
 $dokka.location:xyz.theprogramsrc.filesmodule.config/YmlConfig/save/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.config/-yml-config/save.html
 $dokka.location:xyz.theprogramsrc.filesmodule.config/YmlConfig/set/#kotlin.String#kotlin.Any/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.config/-yml-config/set.html
-$dokka.location:xyz.theprogramsrc.filesmodule.utils////PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.utils/index.html
-$dokka.location:xyz.theprogramsrc.filesmodule.utils//file/java.io.File#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.utils/file.html
-$dokka.location:xyz.theprogramsrc.filesmodule.utils//folder/java.io.File#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule.utils/folder.html
 $dokka.location:xyz.theprogramsrc.filesmodule////PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/index.html
-$dokka.location:xyz.theprogramsrc.filesmodule/Main///PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-main/index.html
-$dokka.location:xyz.theprogramsrc.filesmodule/Main/Main/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-main/-main.html
+$dokka.location:xyz.theprogramsrc.filesmodule/FilesModule///PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-files-module/index.html
+$dokka.location:xyz.theprogramsrc.filesmodule/FilesModule/FilesModule/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-files-module/-files-module.html
+$dokka.location:xyz.theprogramsrc.filesmodule/FilesModule/description/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-files-module/description.html
+$dokka.location:xyz.theprogramsrc.filesmodule/FilesModule/onDisable/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-files-module/on-disable.html
+$dokka.location:xyz.theprogramsrc.filesmodule/FilesModule/onEnable/#/PointingToDeclaration/-files-module/xyz.theprogramsrc.filesmodule/-files-module/on-enable.html
 xyz.theprogramsrc.filesmodule
 xyz.theprogramsrc.filesmodule.config
-xyz.theprogramsrc.filesmodule.utils
 
