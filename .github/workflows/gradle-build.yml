@@ -51,7 +51,7 @@ jobs:
           args: ./build/libs/FilesModule-${{ env.VERSION }}.jar application/java-archive
       # Now we deploy the documents to GitHub pages
       - name: Deploy Dokka
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.6.8
         with:
           branch: gh-pages
           folder: build/dokka
