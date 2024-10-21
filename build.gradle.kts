@@ -37,7 +37,7 @@ dependencies {
 
     implementation("me.carleslc.Simple-YAML:Simple-Yaml:1.8.4")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.3")
 }
 
 blossom {
